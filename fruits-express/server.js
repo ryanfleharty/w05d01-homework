@@ -10,8 +10,10 @@ const Fruits = require('./Models/fruits')
 // creating the index route
 // the index route should show all the fruits
 app.get('/fruits', (req, res) => {
-	res.send(Fruits);
-})
+	res.render('index.ejs', {
+		fruitList: Fruits
+	});
+});
 
 // what we are trying to do
 // localhost:3000/fruits/0 ----> apple
