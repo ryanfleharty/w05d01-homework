@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE-edge">
+	<title>
+		
+	</title>
+</head>
+<body>
+	<a href="/fruits">Back to the Cornucopia</a>
+	<h1>Cornucopia Item</h1>
+	<h3>Fruit Name: <%= fruit.name %></h3>
+	<h3>Fruit Color: <%= fruit.color %></h3>
+	<h3>Fruit Ready to Eat:
+		<% if(fruit.readyToEat === true) { %>
+			<span> It is ready to eat</span>
+		<% } else { %>
+			<span>It is not ready to eat</span>
+		<% } %>	
+	</h3>
+</body>
+</html>
