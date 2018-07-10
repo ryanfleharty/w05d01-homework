@@ -2,7 +2,7 @@
 const express = require('express');
 const Missions = require('./models/marsMissions');
 const app = express();
-const port = 3000;
+const port = 9000;
 
 // * Your mission is to complete the app
 // * The app will need routes for index and show
@@ -13,6 +13,7 @@ const port = 3000;
 // * Bonus: add static css to style the pages
 
 
+app.use(express.static('public'));
 
 // INDEX Route
 // send data to 'missions/index.ejs' view
