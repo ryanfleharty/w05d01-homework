@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<h1>Fruits Home Page</h1>
+	<%for (let i = 0; i < fruitsList.length; i++) { %>
+		<a href="/fruits/<%= i %>"><%=fruitsList[i].name%></a>
+		<% } %>
+</body>
+</html>
