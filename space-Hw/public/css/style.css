@@ -1,3 +1,24 @@
 * {
 	background: linear-gradient(to right, black, lightgrey);
+	font-family: 'Space Mono', monospace;
+	color: red;
+	display: inline-table;
+
+}
+
+.indexpage {
+	align-content: center;
+	text-align: right;
+	background-color: linear-gradient(to left, lightgrey, blue);
+	text-orientation: sideways;
+}
+
+.showpage {
+	align-content: center;
+	background: linear-gradient(to left, blue, violet);
+}
+
+h3 {
+	font-size: 25px;
+	color: white;
 }

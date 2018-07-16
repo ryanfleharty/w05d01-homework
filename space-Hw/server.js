@@ -3,7 +3,8 @@ const express = require('express');
 const app = express();
 
 
-const Missions = require('./models/marsMissions');
+const Missions = require('./models/marsMissions.js');
+app.use(express.static('public'));
 //XX run `npm install` to install dependencies in package.json
 
 // * Your mission is to complete the app
@@ -62,23 +63,28 @@ const marsMissions = [
   }
 ];
 */
+app.get('/', (req,res) => {
+  res.send('Please enter locator with  /missions  to view index');
+})
+// SHOW Route
+// send data to 'missions/show.ejs' view
+// the view should display all the data for a single mission
+app.get('/missions/:index', (req,res) => {
+  res.render('missions/show.ejs', {
+    mission: Missions[req.params.index]
+  });
+})
+
 // INDEX Route
 // send data to 'missions/index.ejs' view
 // the view should display just the names of each mission
 app.get('/missions', (req,res) => {
-  res.render('index.ejs', {
+  res.render('missions/index.ejs', {
     missions: Missions
   })
 })
 
-// SHOW Route
-// send data to 'missions/show.ejs' view
-// the view should display all the data for a single mission
-app.get('./missions/:index', (res,req) => {
-  res.render('show.ejs', {
-    missions: Missions[req.params.index]
-  }
-})
+
 
 // LISTENER
 app.listen(port, function() {

@@ -3,12 +3,19 @@
   <head>
     <meta charset="UTF-8">
     <title>space-show/DavidEpps.GA</title>
-  <link rel="stylesheet" href="css/styles.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Space+Mono" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css"/>
+  <style>
+  	body {background: url("<%=mission.img%>")}
+  </style>
   </head>
   <body>
   	<div class="showpage">
-  	<h1>Mission Show Page</h1>
-  	<h2>Mission Name
+  	<h1>Mission Show Page</h1><br>
+  	<h2>Mission Name: <%= mission.name %></h2><br>
+  	<h2>Launch Date: <%= mission.launchDate %></h2><br>
+  	<h2>Operator: <%= mission.operator %></h2><br>
+  	<h2>Mission Type: <%= mission.missionType %></h2>
 
   </div>
   </body>

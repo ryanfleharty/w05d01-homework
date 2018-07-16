@@ -3,14 +3,15 @@
   <head>
     <meta charset="UTF-8">
     <title>space-index/DavidEpps.GA</title>
-  <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Space+Mono" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
   </head>
   <body>
   <h1>Mission Index Page</h1>
   <ul>
   	<% for(let i=0;i<missions.length;i++){ %>
   	<li>
-  		<a href="/missions/<%=i%>"><%=missions[i].name;%></a>
+  		<h3><img src="<%=missions[i].img; %>" height=42 width=42><a href="/missions/<%=i%>"><%=missions[i].name;%></a></h3>
   	</li>
   	<% } %>
   </ul>
